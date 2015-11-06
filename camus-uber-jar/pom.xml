@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.linkedin.camus</groupId>
+        <artifactId>camus-parent</artifactId>
+        <version>2.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>confluent-camus-uber-jar</artifactId>
+    <name>Confluent Camus Uber Jar</name>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.linkedin.camus</groupId>
+            <artifactId>camus-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.linkedin.camus</groupId>
+            <artifactId>camus-schema-registry</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.linkedin.camus</groupId>
+            <artifactId>camus-etl-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <!-- required by local job runner -->
+        <!-- <dependency>
+          <groupId>commons-httpclient</groupId>
+          <artifactId>commons-httpclient</artifactId>
+          <version>3.1</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.avro</groupId>
+          <artifactId>avro-mapred</artifactId>
+          <version>${avro.version}</version>
+          <scope>provided</scope>
+        </dependency> -->
+    </dependencies>
+    
+    <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>1.7</source>
+              <target>1.7</target>
+            </configuration>
+          </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-shade-plugin</artifactId>
+              <executions>
+                <execution>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>shade</goal>
+                  </goals>
+                   <!-- <configuration>
+                    <artifactSet>
+                      <excludes>
+                        <exclude>org.apache.maven*</exclude>
+                        <exclude>org.codehaus.plexus:*</exclude>
+                        <exclude>classworlds:classworlds</exclude>
+                        <exclude>org.apache.maven:lib:tests</exclude>
+                        <exclude>org.apache.avro:avro-compiler</exclude>
+                        <exclude>org.apache.avro:avro-ipc</exclude>
+                        <exclude>org.mortbay.jetty:*</exclude>
+                        <exclude>io.netty:*</exclude>
+                        <exclude>org.apache.commons:commons-compress</exclude>
+                        <exclude>com.thoughtworks.paranamer:*</exclude>
+                        <exclude>org.tukaani:xz</exclude>
+                        <exclude>org.apache.velocity:velocity</exclude>
+                      </excludes>
+                    </artifactSet>
+                  </configuration> -->
+                </execution>
+              </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

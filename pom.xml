@@ -167,6 +167,7 @@
         <module>camus-schema-registry-avro</module>
         <module>camus-example</module>
         <module>camus-sweeper</module>
+        <module>camus-uber-jar</module>
     </modules>
 
     <licenses>
