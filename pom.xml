@@ -9,7 +9,7 @@
 
     <groupId>com.linkedin.camus</groupId>
     <artifactId>camus-parent</artifactId>
-    <version>1.0-q2</version>
+    <version>1.0-q3</version>
     <packaging>pom</packaging>
     <name>Camus Parent</name>
     <description>
@@ -30,7 +30,7 @@
            <url>http://packages.confluent.io/maven/</url>
        </repository>
     </repositories>
-    
+
     <distributionManagement>
         <repository>
             <id>aws-release</id>
@@ -44,27 +44,27 @@
             <dependency>
                 <groupId>com.linkedin.camus</groupId>
                 <artifactId>camus-api</artifactId>
-                <version>1.0-q2</version>
+                <version>1.0-q3</version>
             </dependency>
             <dependency>
                 <groupId>com.linkedin.camus</groupId>
                 <artifactId>camus-etl-kafka</artifactId>
-                <version>1.0-q2</version>
+                <version>1.0-q3</version>
             </dependency>
             <dependency>
                 <groupId>com.linkedin.camus</groupId>
                 <artifactId>camus-kafka-coders</artifactId>
-                <version>1.0-q2</version>
+                <version>1.0-q3</version>
             </dependency>
             <dependency>
                 <groupId>com.linkedin.camus</groupId>
                 <artifactId>camus-schema-registry</artifactId>
-                <version>1.0-q2</version>
+                <version>1.0-q3</version>
             </dependency>
             <dependency>
                 <groupId>com.linkedin.camus</groupId>
                 <artifactId>camus-schema-registry</artifactId>
-                <version>1.0-q2</version>
+                <version>1.0-q3</version>
                 <type>test-jar</type>
                 <scope>test</scope>
             </dependency>

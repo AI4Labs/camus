@@ -6,22 +6,23 @@
     <parent>
         <groupId>com.linkedin.camus</groupId>
         <artifactId>camus-parent</artifactId>
-        <version>1.0-q2</version>
+        <version>1.0-q3</version>
     </parent>
 
     <artifactId>camus-kafka-coders</artifactId>
     <name>Camus Kafka producer</name>
+    <version>1.0-q3</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-schema-registry-client</artifactId>
-            <version>1.0-q2</version>
+            <version>1.0-q3</version>
         </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
-            <version>1.0-q2</version>
+            <version>1.0-q3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
