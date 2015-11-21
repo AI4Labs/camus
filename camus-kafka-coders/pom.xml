@@ -17,12 +17,12 @@
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-schema-registry-client</artifactId>
-            <version>1.0-q3</version>
+            <version>1.0-q2</version>
         </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
-            <version>1.0-q3</version>
+            <version>1.0-q2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
